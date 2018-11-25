@@ -1,0 +1,49 @@
+#include <iostream>
+using namespace std;
+
+int main(){
+
+// declarations
+int small_room;
+const double small_room_price = 25;
+int large_room;
+const double large_room_price = 35;
+float sales_tax = 0.06;
+//float cost;
+
+//execution
+
+cout << "Estimate for carpet cleaning service" << endl;
+cout << "How many small rooms would you like cleaned? ";
+cin >> small_room;
+cout << "How many large rooms would you like cleaned? ";
+cin >> large_room;
+
+cout << endl;
+
+cout << "Estimate for carpet cleaning" << endl;
+
+cout << "Number of small rooms: " << small_room << endl;
+
+cout << "Number of large rooms: " << large_room << endl;
+
+cout << "Price per small room: $" << small_room_price << endl;
+
+cout << "Price per large room: $" << large_room_price << endl;
+
+cout << "Cost for rooms: $"
+     << (small_room*small_room_price) +
+     (large_room*large_room_price)
+     << endl;
+cout << "Tax: $" 
+    << ((small_room*small_room_price) +
+    (large_room*large_room_price))*sales_tax 
+    << endl;
+    
+cout << "=====================================" << endl;
+cout << "Total estimate: $"
+    << ((small_room*small_room_price) + (large_room*large_room_price)) + 
+    (((small_room*small_room_price) + (large_room*large_room_price))*sales_tax)
+    << endl;
+    
+}
